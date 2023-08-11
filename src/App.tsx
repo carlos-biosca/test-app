@@ -1,17 +1,11 @@
 import './App.css'
-import { Button } from "@/components/ui/button"
-import { Label } from "@/components/ui/label"
-
+import Area from './components/Area'
 
 function App() {
-
   return (
-    <>
-        <div>
-        <Button>Click me</Button>
-        <Label htmlFor="email">Your email address</Label>
-      </div>
-    </>
+    <div className="bg-white w-[375px] h-[812px] px-4">
+      <Area />
+    </div>
   )
 }
 

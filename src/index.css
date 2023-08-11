@@ -1,11 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;600&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 180 8% 97%;
+    --white: 0 0% 100%;
+    --darkgrey: 240 52% 16%;
+    --lightgrey: 240 14% 41%;
+    --darkblue: 195 57% 33%;
+    --lightblue: 194 81% 96%;
+    --thumbborder: 195 83% 60%;
+    --thumbbackground: 194 81% 96%;
+    --blue: 196 84% 87%;
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -70,7 +78,40 @@
   * {
     @apply border-border;
   }
+  html {
+    font-family: "Inter Tight", sans-serif;
+  }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-darkgrey;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+  }
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  .separator::after {
+    content: "|";
+    position: absolute;
+    top: 36px;
+    right: 0px;
+    @apply text-blue;
+  }
+  .bullets::after,
+  .bullets::before {
+    content: "";
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+  }
+  .bullets::before {
+    @apply bg-thumbborder;
+  }
+  .bullets::after {
+    right: 0px;
+    @apply bg-thumbbackground;
   }
 }

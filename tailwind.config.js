@@ -6,7 +6,7 @@ module.exports = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-	],
+  ],
   theme: {
     container: {
       center: true,
@@ -16,7 +16,29 @@ module.exports = {
       },
     },
     extend: {
+      fontSize: {
+        h1: ["21.15px", {
+          lineHeight: "25.72px",
+          fontWeight: "600"
+        }],
+        h3: ["17px", {
+          lineHeight: "20.57px",
+          fontWeight: "600"
+        }],
+        label: "10.88px"
+      },
+      lineHeight: {
+        label: "13.17px"
+      },
       colors: {
+        darkgrey: "hsl(var(--darkgrey))",
+        lightgrey: "hsl(var(--lightgrey))",
+        darkblue: "hsl(var(--darkblue))",
+        lightblue: "hsl(var(--lightblue))",
+        thumbborder: "hsl(var(--thumbborder))",
+        thumbbackground: "hsl(var(--thumbbackground))",
+        blue: "hsl(var(--blue))",
+
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
