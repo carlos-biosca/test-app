@@ -31,7 +31,7 @@ module.exports = {
         label: "13.17px"
       },
       colors: {
-        darkgrey: "hsl(var(--darkgrey))",
+        darkgrey: "hsl(var(--dark-grey))",
         lightgrey: "hsl(var(--lightgrey))",
         darkblue: "hsl(var(--darkblue))",
         lightblue: "hsl(var(--lightblue))",

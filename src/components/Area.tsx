@@ -1,8 +1,9 @@
+import { ReactElement } from "react";
 import { Label } from "@/components/ui/label"
 import { Input } from "@/components/ui/input"
 import { Slider } from "@/components/ui/slider"
 
-const Area = () => {
+const Area: React.FC = (): ReactElement => {
   return (
     <>
       <h1 className="text-h1 pt-[72px] mb-[18px] text-center">
