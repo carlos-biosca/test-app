@@ -6,6 +6,8 @@ type InfoProps = {
   padding: number,
   icon?: boolean
 }
+// eslint-disable-next-line
+const possible = ["pr-0", "pr-4", "pr-8"];
 
 const Info = ({title, value, padding, icon}: InfoProps) => {
   return (

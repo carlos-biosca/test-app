@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
 import {useState, useEffect} from "react"
 import Info from "./Info";
-import clouds from "../../public/clouds.svg"
+import clouds from "/clouds.svg"
 
 import { Progress } from "@/components/ui/progress"
 import {
