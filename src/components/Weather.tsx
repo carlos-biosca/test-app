@@ -131,7 +131,7 @@ const Weather: React.FC = (): ReactElement => {
             </div>
             <div>
               <p className="text-lightgrey text-label leading-label font-normal text-right mb-2">
-                ${data.main.humidity}% humidity
+                {data.main.humidity}% humidity
               </p>
               <Progress value={data.main.humidity}/>
             </div>

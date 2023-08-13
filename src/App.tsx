@@ -6,7 +6,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 function App() {
   return (
-    <div className="relative bg-white w-[375px] h-[812px] px-4">
+    <div className="relative bg-white w-[375px] h-screen md:h-[812px] px-4">
       <Tabs defaultValue="area" className="w-full">
         <TabsList>
           <TabsTrigger value="area" className='dot'><Disc className="stroke-thumbborder"/></TabsTrigger>

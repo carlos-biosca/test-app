@@ -11,6 +11,7 @@ const MapView = ({lat, lon, radius}: MapViewProps) => {
     const customIcon = new Icon ({ iconUrl: "/map-pin.svg", iconSize: [38,38]})
     const map = useMap();
     map.setView([lat, lon]);
+    map.setZoom(13 - radius/5);
     
     return (
       <Marker position={[lat, lon]} icon={customIcon}>
