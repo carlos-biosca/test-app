@@ -2,7 +2,6 @@ import './App.css'
 import Area from './components/Area'
 import Weather from './components/Weather'
 import { Cloud, Disc } from "lucide-react"
-
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 function App() {
