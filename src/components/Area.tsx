@@ -51,6 +51,7 @@ const Area: React.FC = (): ReactElement => {
       <h3 className="text-h3 mb-[9px]">
         Location
       </h3>
+
       <div className='flex mb-4'>
         <div className="flex-1 relative separator">
           <Label htmlFor="latitude">LATITUDE</Label>
@@ -62,13 +63,14 @@ const Area: React.FC = (): ReactElement => {
         </div>
       </div>
       {error.lat || error.lon ? (<p className="text-red-600 mb-4 text-center text-xs">-- coordinates are not valid --</p>) : null}
+      
       <div className="flex justify-between items-center mb-4">
         <h3 className="text-h3">Area</h3>
         <span className="text-lightgrey text-label font-normal leading-label pr-2">max 20 km</span>
       </div>
       <Slider value={range} min={1} max={20} step={1} onValueChange={(e) => handleRangeChange(e)} className="bullets mb-7"/>
       
-      <MapContainer center={[position.lat, position.lat]} zoom={10} scrollWheelZoom={true} zoomControl={false}>
+      <MapContainer center={[position.lat, position.lat]} zoom={13} scrollWheelZoom={true} zoomControl={false}>
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

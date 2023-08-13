@@ -111,10 +111,13 @@ const Weather: React.FC = (): ReactElement => {
               <Info title="SUNSET" value={data.sys.sunset} padding={8}/>
               <Info title="SUNRISE" value={data.sys.sunrise} padding={8}/>
               <div className="flex flex-col pr-0">
-                <span className="text-lightgrey text-label leading-label font-normal mb-1">LOCATION</span>
+                <span className="text-lightgrey text-label leading-label font-normal mb-1 pr-8">LOCATION</span>
                 {
                   coordinates ? (
-                    <a href={`https://maps.google.com/?q=${coordinates[1]},${coordinates[0]}`} target="_blank" className="text-darkgrey text-h3 font-normal">
+                    <a href={`https://maps.google.com/?q=${coordinates[1]},${coordinates[0]}`} 
+                    target="_blank" 
+                    className="text-darkgrey text-h3 font-normal pr-4"
+                    >
                       <MapPin className="h-4 w-4 stroke-lightgrey inline mb-1 mr-0.5" />
                       {data.name}
                     </a>
@@ -127,13 +130,14 @@ const Weather: React.FC = (): ReactElement => {
               <Info title="FEELS LIKE" value={data.main.feels_like} padding={0}/>
             </div>
             <div>
-              <p className="text-lightgrey text-label leading-label font-normal text-right mb-2">${data.main.humidity}% humidity</p>
+              <p className="text-lightgrey text-label leading-label font-normal text-right mb-2">
+                ${data.main.humidity}% humidity
+              </p>
               <Progress value={data.main.humidity}/>
             </div>
           </div>
         ) : null
       }
-      
     </>
   );
 }
